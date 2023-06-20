@@ -18,24 +18,22 @@
 
 /* CHANGE THE BUTTON STYLE */
 .docSlider-button {
-  height: 20px;
-  width: 8px;
-  border-radius: 4px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
   cursor: pointer;
   display: block;
-  margin: 10px 0;
-  background-color: ##fff;
+  margin: 5px 0;
+  background-color: #333;
   opacity: 0.25;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   box-sizing: border-box;
-  transition: transform 0.5s ease, opacity 0.3s ease;
 }
 .docSlider-button.selected {
   opacity: 1;
-  transform: scale(1.3);
 }
 .docSlider-button:active {
   outline: none;
@@ -60,8 +58,8 @@ body,
   margin: 0;
   padding: 0;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   outline: none;
 }
@@ -131,4 +129,28 @@ section:nth-child(odd) {
     overflow-x: hidden;
     overflow-y: auto;
   }
-} /*# sourceMappingURL=docSlider.css.map */
+}
+.docSlider-button {
+  height: 20px;
+  width: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 16px 0;
+  background-color: #fff;
+  opacity: 0.25;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.docSlider-button.selected {
+  opacity: 1;
+  transform: scale(1.4);
+}
+.docSlider-button:active {
+  outline: none;
+}/*# sourceMappingURL=docSlider.css.map */

@@ -123,3 +123,28 @@ section:nth-child(odd) {
     overflow-y: auto;
   }
 }
+
+.docSlider-button {
+  height: 20px;
+  width: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 16px 0;
+  background-color: #fff;
+  opacity: 0.25;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &.selected {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  &:active {
+    outline: none;
+  }
+}
