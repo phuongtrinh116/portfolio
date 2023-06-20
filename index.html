@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li id="tag1" class="active"></li>
+      <li id="tag2"></li>
+      <li id="tag3"></li>
+      <li id="tag4"></li>
+      <li id="tag5"></li>
+    </ul>
+    <div class="section" id="sec1">
+      <img src="./assets/imgs/anh1.jpg" />
+    </div>
+    <div class="section" id="sec2">
+      <img src="./assets/imgs/anh2.jpg" />
+    </div>
+    <div class="section" id="sec3">
+      <img src="./assets/imgs/anh3.jpg" />
+    </div>
+    <div class="section" id="sec4">
+      <img src="./assets/imgs/anh4.jpg" />
+    </div>
+    <div class="section" id="sec5">
+      <img src="./assets/imgs/anh5.png" />
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var delay = false;
+        var currentPage = 1;
+        var pageCount = $(".section").length;
+        var swipe = document.getElementsByTagName(".section");
+        if (window.innerWidth > 768) {
+          $(document).on("mousewheel DOMMouseScroll", function (event) {
+            event.preventDefault();
+            if (delay) return;
+            delay = true;
+            setTimeout(function () {
+              delay = false;
+            }, 100);
+
+            var wd =
+              event.originalEvent.wheelDelta || -event.originalEvent.detail;
+            console.log(wd);
+
+            if (wd < 0) {
+              if (currentPage < pageCount) {
+                currentPage++;
+              }
+            } else {
+              if (1 < currentPage) {
+                currentPage--;
+              }
+            }
+
+            $("html,body").animate(
+              {
+                scrollTop: $("#sec" + currentPage).offset().top,
+              },
+              700
+            );
+
+            $("#tag" + currentPage).addClass("active");
+            for (var i = 1; i <= pageCount; i++) {
+              if (i != currentPage) {
+                $("#tag" + i).removeClass("active");
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
