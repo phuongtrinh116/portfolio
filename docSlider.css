@@ -109,6 +109,7 @@ section:nth-child(odd) {
   align-items: center;
   font-weight: bold;
   font-size: 2em;
+  position: relative;
 }
 .inner img {
   width: 100%;
