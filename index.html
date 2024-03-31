@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Phương Trinh's Portfolio &hearts;</title>
-    <link rel="icon" type="image/x-icon" href="./assets/imgs/06.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/icon.png" />
     <meta
       property="og:title"
       content="Phương Trinh's Portfolio"
@@ -30,127 +30,51 @@
       content="Welcome to my Portfolio"
       data-rh="true"
     />
-    <link rel="stylesheet" href="docSlider.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <meta
       property="og:image"
       content="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.6435-9/103143579_2829522177156989_1643041207554476096_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=w1mKMej7dmoAX9Rj_PO&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfA2m-bwRrnYNRRZLzV9gTHsA6E-M9jQ5XSc2h9tNijMCg&oe=64B93F2D"
       data-rh="true"
     />
-  </head>
-  <body oncontextmenu="return false">
-    <div class="container">
-      <div class="docSlider">
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/01.jpg" alt="img-1" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/02.jpg" alt="img-2" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/03.jpg" alt="img-3" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/04.jpg" alt="img-4" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/05.jpg" alt="img-5" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/06.jpg" alt="img-6" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/07.jpg" alt="img-6" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/08.jpg" alt="img-6" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/09.jpg" alt="img-9" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/10.jpg" alt="img-8" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/11.jpg" alt="img-7" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-        <section>
-          <div class="inner">
-            <img src="./assets/imgs/12.jpg" alt="img-7" />
-            <div class="overlay"></div>
-          </div>
-        </section>
-      </div>
-    </div>
+  </head><body oncontextmenu="return false"><body>
+    <div class="container"></div>
 
-    <script src="docSlider.min.js"></script>
+    <script src="./assets/js/section.js"></script>
     <script>
       if (window.innerWidth > 768) {
-        docSlider.init();
+        docSlider.init()
       }
-      document.addEventListener("contextmenu", (e) => e.preventDefault());
+      document.addEventListener('contextmenu', (e) => e.preventDefault())
 
       function ctrlShiftKey(e, keyCode) {
-        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0)
       }
 
       document.onkeydown = (e) => {
         // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
         if (
           event.keyCode === 123 ||
-          ctrlShiftKey(e, "I") ||
-          ctrlShiftKey(e, "J") ||
-          ctrlShiftKey(e, "C") ||
-          (e.ctrlKey && e.keyCode === "U".charCodeAt(0))
+          ctrlShiftKey(e, 'I') ||
+          ctrlShiftKey(e, 'J') ||
+          ctrlShiftKey(e, 'C') ||
+          (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
         )
-          return false;
-      };
+          return false
+      }
       document.onkeydown = function (e) {
         if (event.keyCode == 123) {
-          return false;
+          return false
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-          return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+          return false
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-          return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+          return false
         }
-        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-          return false;
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+          return false
         }
-      };
+      }
     </script>
   </body>
 </html>
