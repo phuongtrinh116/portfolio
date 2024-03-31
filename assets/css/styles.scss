@@ -6,7 +6,9 @@ body {
 }
 
 .image-container {
-  width: calc(100vw - 12px);
+  width: calc(100vw - 16px);
+  max-width: calc(100vw - 16px);
+
   padding: 0 !important;
   margin-top: -4px;
   ::-webkit-scrollbar-thumb {
@@ -35,7 +37,7 @@ body {
 
 html::-webkit-scrollbar,
 .watch-list::-webkit-scrollbar {
-  width: 12px;
+  width: 16px;
 }
 
 html::-webkit-scrollbar-track,
