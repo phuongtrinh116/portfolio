@@ -29,9 +29,11 @@ body {
     margin: 0;
     object-fit: cover;
   }
-  &:nth-child(1) {
-    width: 100vw;
-    height: 100vh;
+  @media (min-width: 1025px) {
+    &:nth-child(1) {
+      width: 100vw;
+      height: 100vh;
+    }
   }
 }
 

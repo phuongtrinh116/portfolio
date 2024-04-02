@@ -34,9 +34,11 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.image-container:nth-child(1) {
-  width: 100vw;
-  height: 100vh;
+@media (min-width: 1025px) {
+  .image-container:nth-child(1) {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 html::-webkit-scrollbar,

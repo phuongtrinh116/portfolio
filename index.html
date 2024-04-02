@@ -36,45 +36,45 @@
       content="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.6435-9/103143579_2829522177156989_1643041207554476096_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=w1mKMej7dmoAX9Rj_PO&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfA2m-bwRrnYNRRZLzV9gTHsA6E-M9jQ5XSc2h9tNijMCg&oe=64B93F2D"
       data-rh="true"
     />
-  </head><body oncontextmenu="return false"><body>
+  </head>
+  <body oncontextmenu="return false">
     <div class="container"></div>
-
     <script src="./assets/js/section.js"></script>
     <script>
       if (window.innerWidth > 768) {
-        docSlider.init()
+        docSlider.init();
       }
-      document.addEventListener('contextmenu', (e) => e.preventDefault())
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
 
       function ctrlShiftKey(e, keyCode) {
-        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0)
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
       }
 
       document.onkeydown = (e) => {
         // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
         if (
           event.keyCode === 123 ||
-          ctrlShiftKey(e, 'I') ||
-          ctrlShiftKey(e, 'J') ||
-          ctrlShiftKey(e, 'C') ||
-          (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+          ctrlShiftKey(e, "I") ||
+          ctrlShiftKey(e, "J") ||
+          ctrlShiftKey(e, "C") ||
+          (e.ctrlKey && e.keyCode === "U".charCodeAt(0))
         )
-          return false
-      }
+          return false;
+      };
       document.onkeydown = function (e) {
         if (event.keyCode == 123) {
-          return false
+          return false;
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-          return false
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          return false;
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-          return false
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
         }
-        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-          return false
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
         }
-      }
+      };
     </script>
   </body>
 </html>
