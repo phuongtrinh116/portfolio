@@ -38,3 +38,23 @@ for (let i = 0; i < imageNames.length; i++) {
   );
 }
 docSliderElement.innerHTML = sections.join("");
+const images = document.querySelectorAll("img[data-src]");
+
+// Create an intersection observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    // If the image is in the viewport
+    if (entry.isIntersecting) {
+      // Replace the src with the data-src
+      const img = entry.target;
+      img.src = img.getAttribute("data-src");
+      img.removeAttribute("data-src");
+
+      // Stop observing this image
+      observer.unobserve(img);
+    }
+  });
+});
+
+// Start observing each image
+images.forEach((image) => observer.observe(image));
