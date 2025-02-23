@@ -45,24 +45,44 @@
       data-rh="true"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/loading.css" />
   </head>
   <body>
-    <div id="loading" class="loading-container">
-      <div class="loading-spinner"></div>
-    </div>
     <div class="container">
-      <img src="./assets/imgs/1.png" alt="Portfolio" loading="lazy" />
-      <img src="./assets/imgs/2.png" alt="Introduction" loading="lazy" />
-      <img src="./assets/imgs/3.png" alt="Branding" loading="lazy" />
-      <img src="./assets/imgs/4.png" alt="Poster" loading="lazy" />
-      <img src="./assets/imgs/5.png" alt="Social Media" loading="lazy" />
-      <img src="./assets/imgs/6.png" alt="Thank you" loading="lazy" />
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/1.png" alt="Image" />
+      </div>
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/2.png" alt="Image" />
+      </div>
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/3.png" alt="Image" />
+      </div>
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/4.png" alt="Image" />
+      </div>
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/5.png" alt="Image" />
+      </div>
+      <div class="image-container">
+        <img class="portfolio-image" src="./assets/imgs/6.png" alt="Image" />
+      </div>
     </div>
     <script>
-      window.addEventListener("load", function () {
-        document.getElementById("loading").classList.add("loading-hidden");
-      });
+      window.onload = function () {
+        const blurImages = document.getElementsByClassName("portfolio-image");
+        Array.from(blurImages).forEach((img) => {
+          if (img.complete) {
+            img.style.filter = "unset";
+          } else {
+            img.onload = function () {
+              img.style.filter = "unset";
+            };
+            img.onerror = function () {
+              this.style.display = "none";
+            };
+          }
+        });
+      };
     </script>
   </body>
 </html>

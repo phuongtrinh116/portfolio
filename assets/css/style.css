@@ -16,6 +16,7 @@ body {
   align-items: center;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: rgb(255, 251, 232);
 }
 
 img {
@@ -29,4 +30,16 @@ img {
     height: auto;
     max-width: 1440px;
   }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  filter: blur(10px); /* Ban đầu làm mờ ảnh */
+  transition: filter 1s ease-out; /* Hiệu ứng làm rõ ảnh */
 }
