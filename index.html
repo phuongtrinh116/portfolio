@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D49FGSMVMK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D49FGSMVMK");
+    </script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -21,7 +35,7 @@
     />
     <meta
       name="keywords"
-      content="Phương Trinh, Portfolio, design, my portfolio, beautiful portfolio, beautiful"
+      content="Portfolio, thiết kế, vẽ, Phương Trinh, Portfolio, design, my portfolio, beautiful portfolio, beautiful"
     />
     <meta name="author" content="Phương Trinh" />
     <meta name="description" content="Welcome to my Portfolio" data-rh="true" />
@@ -30,65 +44,16 @@
       content="Welcome to my Portfolio"
       data-rh="true"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <meta
-      property="og:image"
-      content="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.6435-9/103143579_2829522177156989_1643041207554476096_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=w1mKMej7dmoAX9Rj_PO&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfA2m-bwRrnYNRRZLzV9gTHsA6E-M9jQ5XSc2h9tNijMCg&oe=64B93F2D"
-      data-rh="true"
-    />
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-SSFY00H13F");
-    </script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body oncontextmenu="return false">
-    <div class="container"></div>
-    <script src="./assets/js/section.js"></script>
-    <script>
-      if (window.innerWidth > 768) {
-        docSlider.init();
-      }
-      document.addEventListener("contextmenu", (e) => e.preventDefault());
-
-      function ctrlShiftKey(e, keyCode) {
-        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-      }
-
-      document.onkeydown = (e) => {
-        // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-        if (
-          event.keyCode === 123 ||
-          ctrlShiftKey(e, "I") ||
-          ctrlShiftKey(e, "J") ||
-          ctrlShiftKey(e, "C") ||
-          (e.ctrlKey && e.keyCode === "U".charCodeAt(0))
-        )
-          return false;
-      };
-      document.onkeydown = function (e) {
-        if (event.keyCode == 123) {
-          return false;
-        }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-          return false;
-        }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-          return false;
-        }
-        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-          return false;
-        }
-      };
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SSFY00H13F"
-    ></script>
+  <body>
+    <div class="container">
+      <image src="./assets/imgs/1.png" alt="Portfolio" />
+      <image src="./assets/imgs/2.png" alt="Introduction" />
+      <image src="./assets/imgs/3.png" alt="Branding" />
+      <image src="./assets/imgs/4.png" alt="Poster" />
+      <image src="./assets/imgs/5.png" alt="Social Media" />
+      <image src="./assets/imgs/6.png" alt="Thank you" />
+    </div>
   </body>
 </html>
